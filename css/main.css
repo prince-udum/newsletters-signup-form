@@ -1,6 +1,6 @@
 :root {
   /* primary */
-  --tomato: hsl(4, 100%, 67%);
+  --tomato: rgb(255, 98, 87);
   --light-tomato: hsl(3, 100%, 92%);
 
   /* neutrals */
@@ -14,7 +14,7 @@
   --spacing: 0.1rem;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 5px 20px rgba(255, 98, 87, 0.8);
   --max-width: 1170px;
   --fixed-width: 620px;
 }
@@ -75,6 +75,7 @@ p {
 
 .signup-card {
   background-color: var(--white);
+  /* display: none; */
 }
 
 .desktop-img {
@@ -180,9 +181,10 @@ input:focus {
 
 .btn:hover {
   background: var(--tomato);
+  box-shadow: var(--dark-shadow);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   body {
     background-color: var(--charcoal-grey);
   }
@@ -265,6 +267,7 @@ input:focus {
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  background: var(--white);
 }
 
 .success-img {
@@ -285,4 +288,26 @@ input:focus {
 
 .confirmation .btn {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .signup-success {
+    width: 400px;
+    height: unset;
+    padding: 2rem 2.5rem 3rem;
+    border-radius: 1.5rem;
+  }
+
+  .success-img {
+    margin-bottom: 1.5rem;
+  }
+
+  .confirmation p {
+    /* font-size: 0.75rem; */
+    font-size: 13px;
+    margin-bottom: 1.5rem;
+  }
+  .confirmation h2 {
+    margin-bottom: 1rem;
+  }
 }
